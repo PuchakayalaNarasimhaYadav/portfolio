@@ -1,0 +1,84 @@
+.banner_home{
+    /* background-color: #fff; */
+    height: 100vh;
+    display: flex;
+    background-image: url('../../Assets/wp12709036.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner_text{
+    flex: 1;
+}
+.text_details{
+    position: absolute;
+    top: 25%;
+    left: 90px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap:15px ;
+}
+.title{
+    font-size: 80px;
+    font-weight: 700;
+}
+.banner_img{
+    flex:1;
+    position: relative;
+}
+.person_img{
+    background-image: url('../../Assets/IMG_20220208_220409_420-removebg-preview.png');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    right: 0;
+    mix-blend-mode:multiply;    
+    /* z-index: 1; */
+
+}
+
+.para{
+    font-weight: 400;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+    
+@media (max-width:1080px){
+    .banner_home{
+        background-image: url('../../Assets/IMG_20220208_220409_420-removebg-preview.png');
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-color: #fff;
+        opacity:0.8;
+    }
+    .banner_img{
+        background-image: unset;
+    } 
+    .text_details{
+        position: absolute;
+        top: 20%;
+        left: 20px;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap:15px ;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    .title{
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+    .desig_nation{
+        font-size: clamp(1rem, 3vw, 2.5rem);
+    }
+    .person_img{
+        display: none;
+    }
+}
