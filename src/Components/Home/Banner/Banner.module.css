@@ -27,19 +27,20 @@
     position: relative;
 }
 .person_img{
-    background-image: url('../../Assets/IMG_20220208_220409_420-removebg-preview.png');
+    background-image: url('../../Assets/IMG_Profile-removebg-preview.png');
     background-position:center;
     background-repeat: no-repeat;
-    background-size:contain;
-    height: 100%;
-    width: 80%;
+    background-size:70%;
+    height: 90%;
+    width: 85%;
     position: absolute;
-    right: 0;
-    mix-blend-mode:multiply;    
+    right: 10px;
+    top: 1px;
+    border-radius: 200%;
+    /* mix-blend-mode:multiply;     */
     /* z-index: 1; */
-
+    box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.5);
 }
-
 .para{
     font-weight: 400;
     color: #555;
@@ -47,14 +48,12 @@
     flex-direction: column;
     gap: 5px;
 }
-
-    
 @media (max-width:1080px){
     .banner_home{
         background-image: url('../../Assets/IMG_20220208_220409_420-removebg-preview.png');
         background-position:center;
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: cover;
         background-color: #fff;
         opacity:0.8;
     }

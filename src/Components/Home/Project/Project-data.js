@@ -16,7 +16,7 @@ const Myprojectdata =[
     {
         image:jobboard,
         project_title:'Job board',
-        // proj_link:"https://responsive-dashboard-realtime.netlify.app/",
+        proj_link:"https://narasimha-job-board.netlify.app/",
 
     }
 ]

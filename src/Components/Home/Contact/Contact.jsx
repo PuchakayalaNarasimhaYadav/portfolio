@@ -23,7 +23,7 @@ export default function Contact(){
                         <p><SiGooglemaps size={30} color='red'/></p>  <h4>Bangalore,Karnataka</h4>
                     </div>
                     <div style={{display:'flex',gap:'10px'}}>
-                        <MdOutlineMail size={30} color='orange'/> <p> narasimhapuchakayala35@gmail.com</p>
+                        <MdOutlineMail size={30} color='orange'/> <p> narasimhapuchakayala15@gmail.com</p>
                     </div>
                     <div style={{display:'flex',gap:'10px'}}>
                     <CiMobile3 size={30} color='grey'/> <p>+91  9573597108</p>
@@ -44,7 +44,7 @@ export default function Contact(){
                                 <textarea rows="7"   placeholder="Type comment" name="comment"></textarea>   
                             </div>
                             <div style={{margin:'20px 12px'}}>
-                                <Button variant="contained">Send Message</Button>
+                                <Button variant="contained" style={{textTransform:'capitalize'}}>Send Message</Button>
                             </div>
                     </form>
                 </div>

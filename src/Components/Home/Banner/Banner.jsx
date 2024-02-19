@@ -3,7 +3,6 @@ import BannerStyle from './Banner.module.css'
 import { Button } from "@mui/material";
 import AOS from 'aos';
 // import Snowfall from "react-snowfall";
-
 export default function Banner(){
     useEffect(() => {
         AOS.init({
@@ -27,7 +26,7 @@ export default function Banner(){
                     </div>
                     
                     <div>
-                            <Button variant="contained" style={{backgroundColor:'black'}}>Download CV</Button>
+                            <Button variant="contained" style={{backgroundColor:'black',textTransform:'capitalize'}}>Download CV</Button>
                     </div>
                 </div>
             </div>

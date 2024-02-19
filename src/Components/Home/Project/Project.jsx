@@ -19,7 +19,7 @@ export default function Myprojects() {
           Myprojectdata.map((item, id) => (
             <div className={ProjectStyle.project_card} key={id}>
               <div>
-                  <a href={item.proj_link} target ="_blank">
+                  <a href={item.proj_link}>
                     <img src={item.image} alt="logo" className={ProjectStyle.image}/>
                   </a>
               </div>

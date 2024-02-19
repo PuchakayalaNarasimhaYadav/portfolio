@@ -47,11 +47,6 @@ export default function About(){
                     <p> I like work with new people.New people new Experiences.</p>
                     <p>I can work well under pressure and make best of any situation</p>
                 </div>
-                {/* <div className={AboutStyle.para_gap}>
-                    <p>I'm a Freelancer Front-end Developer with over 3 years of experience. I'm from San Francisco.</p>
-                    <p> I code and create web elements for amazing people around the world.</p>
-                    <p> I like work with new people.New people new Experiences.</p>
-                </div> */}
                 <div className={AboutStyle.info_me}>
                     <div className={AboutStyle.para_gap}>
                         <p>Name: Narasimha Puchakayala</p>
@@ -63,7 +58,6 @@ export default function About(){
                         <p>Phone: +91 9161214709</p>
                         <p>Email: narasimhapuchakayala15@gmail.com</p>
                         <p>Skype: Narasimha Puchakayala</p>
-                        {/* <p>Freelance: Available</p> */}
                     </div>
                 </div>
             </div>
@@ -149,7 +143,6 @@ export default function About(){
                 <div className={AboutStyle.experience_data} data-aos='zoom-in' data-aos-duration='1000' data-aos-delay='200'>
                    <div className={AboutStyle.title_data}>
                         <p style={{fontSize: "20px",fontWeight: "500"}}>Front-end Developer</p>
-                        <p>on site</p>
                         <p>Oct 2023 - Present</p>
                         <p className={AboutStyle.intern_data}>Internship</p>
                    </div>
