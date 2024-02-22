@@ -9,10 +9,11 @@ export default function Banner(){
             duration: 800,
             easing: 'ease-in-out'});
     }, []);
+    
     return(
         <>
         <div className={BannerStyle.banner_home} id="Bannaer_page">
-            {/* <Snowfall color="#26c6da" snowflakeCount={100} /> */}
+            {/* <Snowfall color="#fff" snowflakeCount={100}  fontSize="1px"/> */}
             <div className={BannerStyle.banner_text}>
                 <div className={BannerStyle.text_details} data-aos="fade-up" data-aos-duration='1000'>
                     <p style={{fontSize: '20px',fontWeight: "400"}}>Hello, My name is</p>
@@ -55,6 +56,11 @@ export default function Banner(){
                     <div>
                         <Button variant="contained" style={{backgroundColor:'black',textTransform:'capitalize'}}>Download CV</Button>
                     </div>
+                    <div className={BannerStyle.top_bottom}></div>
+                    <div className={BannerStyle.right_left}></div>
+                    <div className={BannerStyle.left_right}></div>
+                    <div className={BannerStyle.middle}></div>
+                    <div className={BannerStyle.middle_end}></div>
             </div>
         </>
     )
