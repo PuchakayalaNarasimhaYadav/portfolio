@@ -12,13 +12,55 @@
 }
 
 .text_details {
-    position: absolute;
-    top: 25%;
+    position: relative;
+    top: 12%;
     left: 90px;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    z-index: 1;
+}
+
+.circle_animi {
+    position: absolute;
+    background-color: rgb(242, 196, 254);
+    width: 180px;
+    height: 180px;
+    box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    animation: SlideBoth 7s infinite both;
+    border-radius: 100%;
+    top: 50px;
+    filter: blur(1px);
+}
+.cirlesmall_animi{
+    position: absolute;
+    background-color: rgb(201, 201, 201);
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    animation: SlidingBoth 5s infinite both;
+    border-radius: 100%;
+    top: 130px;
+    left: 120px;
+}
+@keyframes SlidingBoth{
+    50%{
+        transform: translateX(100%);
+    }
+    50%{
+        transform: translateX(100%);
+    }
+}
+@keyframes SlideBoth{
+    50%{
+        transform: translateX(100%);
+    }
+    50%{
+        transform: translateX(100%);
+    }
 }
 
 .title {
@@ -36,35 +78,42 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 90%;
-    width: 85%;
+    /* height: 90%;
+    width: 85%; */
+    min-height: 500px;
+    min-width: 500px;
     position: absolute;
-    right: 10px;
-    top: 1px;
+    right: 65px;
+    top: 30px;
     border-radius: 100%;
     /* mix-blend-mode:multiply;     */
     /* z-index: 1; */
     box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.5);
 }
+
 .bannerhide_img {
     flex: 1;
     display: none;
 }
+
 .personhide_img {
 
     display: none;
 }
+
 .para {
     font-weight: 400;
     /* color: #555; */
-    color:#fff;
+    color: #fff;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.texthide_details{
+
+.texthide_details {
     display: none;
 }
+
 @media (max-width:1080px) {
     .banner_home {
         /* background-image: url('../../Assets/dark-blue-modern-blurred-background-vector.jpg'); */
@@ -84,8 +133,9 @@
         padding: 1rem;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
+
     .personhide_img {
         display: block;
         background-image: url('../../Assets/IMG_20240222_1032Banner.png');
@@ -101,13 +151,16 @@
         max-width: 356px;
         margin: auto;
     }
+
     .banner_img {
         background-image: unset;
         flex: 0.1rem;
     }
+
     .banner_text {
-        flex: 0.1
+        flex: 0.1;
     }
+
     .text_details {
         position: absolute;
         top: 45%;
@@ -121,16 +174,20 @@
         z-index: 1;
         display: none;
     }
+
     .title {
         font-size: clamp(2rem, 10vw, 3rem);
     }
+
     .desig_nation {
         font-size: clamp(1rem, 3vw, 2.5rem);
     }
+
     .person_img {
         display: none;
     }
-    .texthide_details{
+
+    .texthide_details {
         display: block;
         background-color: #fff8f8;
         backdrop-filter: 12px;
@@ -139,20 +196,22 @@
         flex-direction: column;
         gap: 15px;
         position: relative;
-        box-shadow: 0 4px 4px  rgba(0, 0, 0, 0.1);
-      
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+
     }
-    .para_hide{
+
+    .para_hide {
         font-weight: 400;
         /* color: #555; */
-        color:#555;
+        color: #555;
         display: flex;
         flex-direction: column;
         gap: 5px;
         z-index: 1;
-       
+
     }
-    .top_bottom{
+
+    .top_bottom {
         width: 50px;
         height: 50px;
         position: absolute;
@@ -163,9 +222,10 @@
         border-radius: 100%;
         z-index: -1;
         animation: slideBothSide 4s infinite both;
-        filter: blur(2px);
+        filter: blur(1px);
     }
-    .right_left{
+
+    .right_left {
         width: 180px;
         height: 180px;
         position: absolute;
@@ -176,9 +236,10 @@
         border-radius: 100%;
         z-index: -2;
         animation: slideRightToleft 6s infinite both;
-        filter: blur(2px);
+        filter: blur(1px);
     }
-    .left_right{
+
+    .left_right {
         width: 150px;
         height: 150px;
         position: absolute;
@@ -189,9 +250,10 @@
         border-radius: 100%;
         z-index: -3;
         animation: slideLeftToRight 8s infinite both;
-        filter: blur(2px);
+        filter: blur(1px);
     }
-    .middle{
+
+    .middle {
         width: 50px;
         height: 50px;
         position: absolute;
@@ -202,9 +264,10 @@
         border-radius: 100%;
         z-index: -1;
         animation: slideBothSide 6s infinite both;
-        filter: blur(2px);
+        filter: blur(1px);
     }
-    .middle_end{
+
+    .middle_end {
         width: 50px;
         height: 50px;
         position: absolute;
@@ -215,41 +278,55 @@
         border-radius: 100%;
         z-index: -1;
         animation: slideBothSide 6s infinite both;
-        filter: blur(2px);
+        filter: blur(1px);
     }
 
 }
-@keyframes slideLeftToRight{
-    50%{
+
+@keyframes slideLeftToRight {
+    50% {
         transform: translateX(100%);
     }
-    50%{
-        transform: translateX(100%);
-    }
-}
-@keyframes slideRightToleft{
-    50%{
-        transform: translateX(100%);
-    }
-    50%{
+
+    50% {
         transform: translateX(100%);
     }
 }
-@keyframes slideBothSide{
-      50% {
+
+@keyframes slideRightToleft {
+    50% {
+        transform: translateX(100%);
+    }
+
+    50% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slideBothSide {
+    50% {
         transform: translateY(100%);
-      }
-      500% {
+    }
+
+    500% {
         transform: translateY(100%);
-      }
-  }
-@media (max-width:480px){
-    .banner_home{
+    }
+}
+
+@media (max-width:480px) {
+    .banner_home {
         height: 60vh;
     }
-    .bannerhide_img{
+
+    .bannerhide_img {
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
+    }
+}
+@media (max-width:1024px){
+    .personhide_img{
+        min-height: 600px;
+        min-width: 600px;
     }
 }

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import BannerStyle from './Banner.module.css'
 import { Button } from "@mui/material";
 import AOS from 'aos';
+import file from '../../Resume file/Narasimha_Resume.pdf'
 // import Snowfall from "react-snowfall";
 export default function Banner(){
     useEffect(() => {
@@ -9,7 +10,6 @@ export default function Banner(){
             duration: 800,
             easing: 'ease-in-out'});
     }, []);
-    
     return(
         <>
         <div className={BannerStyle.banner_home} id="Bannaer_page">
@@ -27,8 +27,10 @@ export default function Banner(){
                         <p> web services and online stores.</p>
                     </div>
                     <div>
-                        <Button variant="contained" style={{backgroundColor:'black',textTransform:'capitalize'}}>Download CV</Button>
+                        <a href={file} download><Button variant="contained" style={{backgroundColor:'black',textTransform:'capitalize'}}>Download CV</Button></a>
                     </div>
+                    <div className={BannerStyle.circle_animi}></div>
+                    <div className={BannerStyle.cirlesmall_animi}></div>
                 </div>
             </div>
             <div className={BannerStyle.banner_img}>
@@ -42,7 +44,7 @@ export default function Banner(){
                 </div>
             </div>
         </div>
-         <div className={BannerStyle.texthide_details} data-aos="zoom-in" data-aos-duration='1000'>
+        <div className={BannerStyle.texthide_details} data-aos="zoom-in" data-aos-duration='1000'>
                     <p style={{fontSize: '20px',fontWeight: "400"}}>Hello, My name is</p>
                     <p className={BannerStyle.title}>Narasimha<br/> Puchakayala</p>
                     <div style={{fontSize:'30px',fontWeight: "500"}} >
@@ -54,7 +56,7 @@ export default function Banner(){
                         <p> web services and online stores.</p>
                     </div>
                     <div>
-                        <Button variant="contained" style={{backgroundColor:'black',textTransform:'capitalize'}}>Download CV</Button>
+                        <a href={file} download><Button variant="contained" style={{backgroundColor:'black',textTransform:'capitalize'}}>Download CV</Button></a>
                     </div>
                     <div className={BannerStyle.top_bottom}></div>
                     <div className={BannerStyle.right_left}></div>

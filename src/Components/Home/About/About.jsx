@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import AboutStyle from './About.module.css'
 import AOS from "aos";
-import {  FaInstagram,  FaLinkedinIn,  FaPinterestP, FaTabletAlt, FaTwitter } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa6";
-import { IoDesktopSharp } from "react-icons/io5";
+import {  FaLinkedinIn,  FaPinterestP, FaTabletAlt, FaTwitter } from "react-icons/fa";
+import { IoDesktopSharp, IoLogoGithub } from "react-icons/io5";
 import { TbTargetArrow } from "react-icons/tb";
 import Awardsdata from "./About-data";
-
+import { RiWhatsappFill } from "react-icons/ri";
 export default function About(){
     useEffect(()=>{
         AOS.init({
@@ -24,9 +23,9 @@ export default function About(){
                         
                     </div>
                     <div className={AboutStyle.icons}>
-                            <p className={AboutStyle.icon1_style}><FaFacebookF size={20}/></p>
+                            <p className={AboutStyle.icon1_style}><IoLogoGithub size={20}/></p>
                             <p className={AboutStyle.icon2_style}><FaTwitter size={20}/></p>
-                            <p className={AboutStyle.icon3_style}><FaInstagram  size={20}/></p>
+                            <p className={AboutStyle.icon3_style}><RiWhatsappFill size={20}/></p>
                             <p className={AboutStyle.icon4_style}><FaLinkedinIn  size={20}/></p>
                             <p className={AboutStyle.icon5_style}><FaPinterestP size={20}/></p>
                     </div>
