@@ -26,7 +26,7 @@ export default function About(){
                     <div className={AboutStyle.icons}>
                             <a href="https://github.com/PuchakayalaNarasimhaYadav?tab=repositories"><p className={AboutStyle.icon1_style}><IoLogoGithub size={20}/></p></a>
                             <a href="https://x.com/Narasimha393841?t=cQp7IG4O33gQbW0TrUsTmQ&s=08"><p className={AboutStyle.icon2_style}><FaTwitter size={20}/></p></a>
-                            <p className={AboutStyle.icon3_style}><RiWhatsappFill size={20}/></p>
+                            <a href="https://web.whatsapp.com/"><p className={AboutStyle.icon3_style}><RiWhatsappFill size={20}/></p></a>
                             <a href="https://www.linkedin.com/in/narasimha-puchakayala-1255292b0?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BACiQflyVQmeCkoV6lbBIwg%3D%3D"><p className={AboutStyle.icon4_style}><FaLinkedinIn  size={20}/></p></a>
                             <a href="https://join.skype.com/invite/uOKfURNmSmkI"><p className={AboutStyle.icon5_style}><FaSkype  size={20}/></p></a>
                     </div>

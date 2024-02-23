@@ -1,16 +1,36 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Contactstyles from './Contact.module.css'
 import { Button} from "@mui/material";
 import AOS from "aos";
 import { SiGooglemaps } from "react-icons/si";
 import { MdOutlineMail } from "react-icons/md";
 import { CiMobile3 } from "react-icons/ci";
+import emailjs from '@emailjs/browser';
 export default function Contact(){
     useEffect(()=>{
         AOS.init({
             duration:800
         })
     },[])
+    const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    // console.log("e.....",e.current)
+    emailjs
+      .sendForm('service_dyr8h7s', 'template_j29f2fc', form.current, {
+        publicKey: 'XivewA8f3Y5Qt2Cd9',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          form.current.reset()
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
     return(
         <div className={Contactstyles.contact_main} id='contact'>
             <div>
@@ -31,20 +51,20 @@ export default function Contact(){
                 </div>
                 <div className={Contactstyles.form_details} data-aos='fade-right'>
                     <p>Say Something</p>
-                    <form action="" autoComplete="off">
+                    <form ref={form} onSubmit={sendEmail} autoComplete="off">
                         <div className={Contactstyles.form_main}>
                             <div className={Contactstyles.input_one}>
-                                <input type="text" name="fullname" placeholder="fullname"/>
+                                <input type="text" name="from_name" placeholder="fullname"/>
                             </div>
                             <div className={Contactstyles.input_one}>
-                                <input type="email" name='email' placeholder="email address"/>
+                                <input type="email" name='from_email' placeholder="email address"/>
                             </div>
                         </div>
                             <div className={Contactstyles.text_area}>
-                                <textarea rows="7"   placeholder="Type comment" name="comment"></textarea>   
+                                <textarea rows="7" name="message"  placeholder="Type comment"></textarea>   
                             </div>
                             <div style={{margin:'20px 12px'}}>
-                                <Button variant="contained" style={{textTransform:'capitalize'}}>Send Message</Button>
+                                <Button variant="contained" style={{textTransform:'capitalize'}} type="submit">Send Message</Button>
                             </div>
                     </form>
                 </div>
