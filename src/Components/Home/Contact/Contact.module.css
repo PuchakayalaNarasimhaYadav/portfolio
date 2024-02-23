@@ -51,7 +51,7 @@
   }
   .form_main{
     display: flex;
-    gap: 1rem;
+    gap: 10px;
   }
   .input_one, input{
     flex: 1;
@@ -69,7 +69,17 @@
     outline: none;
     resize: none;
   }
-  
+.errormgs{
+  font-size: 12px;
+  color: red;
+  margin: 0 15px;
+}
+.term_one{
+  flex: 1;
+}
+.term_two{
+  flex: 1;
+}
   @keyframes slideBothSide {
     /* 50% {
       transform: translateY(-100%);

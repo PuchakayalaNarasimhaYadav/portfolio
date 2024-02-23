@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Contactstyles from './Contact.module.css'
 import { Button} from "@mui/material";
 import AOS from "aos";
@@ -7,6 +7,45 @@ import { MdOutlineMail } from "react-icons/md";
 import { CiMobile3 } from "react-icons/ci";
 import emailjs from '@emailjs/browser';
 export default function Contact(){
+    const [username,setUsername]=useState("")
+    const [email,setEmail]=useState("")
+    const [formerror,setFormerror]=useState({
+        username:'',
+        password:''
+    })
+    function UsernameErrorhandler(){
+        let  Isuserhandler = username && username.trim();
+        let UserError ="";
+        if(!Isuserhandler){
+            UserError="*Enter your full name";
+        }
+        setFormerror((prev)=>{
+            prev.username=UserError
+            return Object.assign({},prev)
+        })
+    }
+    function EmailErrorhandler(){
+        let IsEmailhandler =  email && email.trim();
+        let EmailError =''
+        if(!IsEmailhandler){
+            EmailError='*Enter your email address'
+        }
+        else if(email.length < 8){
+            EmailError ='Should be minimum 8 char';
+        }
+        setFormerror((prev)=>{
+            prev.email= EmailError;
+             return Object.assign({},prev)
+        })
+    }
+    function Userhandler(event){
+            setUsername(event.target.value)
+            UsernameErrorhandler();
+    }
+    function Emailhandler(event){
+        setEmail(event.target.value)
+        EmailErrorhandler()
+    }
     useEffect(()=>{
         AOS.init({
             duration:800
@@ -16,6 +55,8 @@ export default function Contact(){
 
   const sendEmail = (e) => {
     e.preventDefault();
+    UsernameErrorhandler();
+    EmailErrorhandler();
     // console.log("e.....",e.current)
     emailjs
       .sendForm('service_dyr8h7s', 'template_j29f2fc', form.current, {
@@ -30,6 +71,7 @@ export default function Contact(){
           console.log('FAILED...', error.text);
         },
       );
+      
   };
     return(
         <div className={Contactstyles.contact_main} id='contact'>
@@ -53,11 +95,27 @@ export default function Contact(){
                     <p>Say Something</p>
                     <form ref={form} onSubmit={sendEmail} autoComplete="off">
                         <div className={Contactstyles.form_main}>
-                            <div className={Contactstyles.input_one}>
-                                <input type="text" name="from_name" placeholder="fullname"/>
+                            <div className={Contactstyles.term_one}>
+                                <div className={Contactstyles.input_one}>
+                                    <input type="text" name="from_name" placeholder="fullname" value={username} onChange={Userhandler}/>
+                                </div>
+                                {
+                                    formerror.username && 
+                                    <div className={Contactstyles.errormgs}>
+                                    <small >{formerror.username}</small>
+                                    </div>
+                                }
                             </div>
+                            <div className={Contactstyles.term_two}>
                             <div className={Contactstyles.input_one}>
-                                <input type="email" name='from_email' placeholder="email address"/>
+                                <input type="email" name='from_email' placeholder="email address" value={email} onChange={Emailhandler}/>
+                            </div>
+                            {
+                                formerror.email &&
+                                <div className={Contactstyles.errormgs}>
+                                    <small >{formerror.email}</small>
+                                </div> 
+                            }
                             </div>
                         </div>
                             <div className={Contactstyles.text_area}>
