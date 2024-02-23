@@ -324,9 +324,3 @@
         transform: translate(-50%, -50%);
     }
 }
-@media (max-width:1024px){
-    .personhide_img{
-        min-height: 600px;
-        min-width: 600px;
-    }
-}
