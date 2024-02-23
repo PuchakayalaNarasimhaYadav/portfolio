@@ -35,6 +35,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 15px;
+    overflow-wrap:anywhere;
   }
   .form_details{
     flex: 1;

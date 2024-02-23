@@ -13,14 +13,14 @@ export default function Contact(){
     },[])
     return(
         <div className={Contactstyles.contact_main} id='contact'>
-            <div id="MyProjects_Ram">
+            <div>
                 <div className={Contactstyles.animi_circle}></div>
                 <p className={Contactstyles.name_head}>Get In Touch</p>
             </div>
             <div className={Contactstyles.contact_details}>
                 <div className={Contactstyles.address}>
                     <div style={{display:'flex',gap:'10px'}}>
-                        <p><SiGooglemaps size={30} color='red'/></p>  <h4>Bangalore,Karnataka</h4>
+                        <p><SiGooglemaps size={30} color='red'/></p> <h4> BTM layout, 2nd stage, Bangalore,Karnataka</h4>
                     </div>
                     <div style={{display:'flex',gap:'10px'}}>
                         <MdOutlineMail size={30} color='orange'/> <p> narasimhapuchakayala15@gmail.com</p>

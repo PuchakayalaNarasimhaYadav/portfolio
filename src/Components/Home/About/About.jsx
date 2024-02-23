@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import AboutStyle from './About.module.css'
 import AOS from "aos";
-import {  FaLinkedinIn,  FaPinterestP, FaTabletAlt, FaTwitter } from "react-icons/fa";
+import {  FaLinkedinIn, FaSkype, FaTabletAlt, FaTwitter } from "react-icons/fa";
 import { IoDesktopSharp, IoLogoGithub } from "react-icons/io5";
 import { TbTargetArrow } from "react-icons/tb";
 import Awardsdata from "./About-data";
 import { RiWhatsappFill } from "react-icons/ri";
+import { Button } from "@mui/material";
 export default function About(){
     useEffect(()=>{
         AOS.init({
@@ -23,11 +24,11 @@ export default function About(){
                         
                     </div>
                     <div className={AboutStyle.icons}>
-                            <p className={AboutStyle.icon1_style}><IoLogoGithub size={20}/></p>
-                            <p className={AboutStyle.icon2_style}><FaTwitter size={20}/></p>
+                            <a href="https://github.com/PuchakayalaNarasimhaYadav?tab=repositories"><p className={AboutStyle.icon1_style}><IoLogoGithub size={20}/></p></a>
+                            <a href="https://x.com/Narasimha393841?t=cQp7IG4O33gQbW0TrUsTmQ&s=08"><p className={AboutStyle.icon2_style}><FaTwitter size={20}/></p></a>
                             <p className={AboutStyle.icon3_style}><RiWhatsappFill size={20}/></p>
-                            <p className={AboutStyle.icon4_style}><FaLinkedinIn  size={20}/></p>
-                            <p className={AboutStyle.icon5_style}><FaPinterestP size={20}/></p>
+                            <a href="https://www.linkedin.com/in/narasimha-puchakayala-1255292b0?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BACiQflyVQmeCkoV6lbBIwg%3D%3D"><p className={AboutStyle.icon4_style}><FaLinkedinIn  size={20}/></p></a>
+                            <a href="https://join.skype.com/invite/uOKfURNmSmkI"><p className={AboutStyle.icon5_style}><FaSkype  size={20}/></p></a>
                     </div>
                     <div className={AboutStyle.my_name}>
                         <p style={{fontSize:'16px',color:'#0b0b13'}}>Front-end Developer</p>
@@ -41,20 +42,19 @@ export default function About(){
                     <p>Biography</p>
                 </div>
                 <div className={AboutStyle.para_gap}>
-                    <p >I'm a  Front-end Developer with over 3 months of internship experience. I'm from Andhra Pradesh.</p>
+                    <p >I'm a  Frontend Developer with over 6 months of internship experience. I'm from Andhra Pradesh.</p>
                     <p >I code and create Interactive Web Applications for amazing people around the world.</p>
-                    <p> I like work with new people.New people new Experiences.</p>
-                    <p>I can work well under pressure and make best of any situation</p>
+                    <p> I Developed responsive design for optimal user experience on various devices and platforms.</p>
                 </div>
                 <div className={AboutStyle.info_me}>
                     <div className={AboutStyle.para_gap}>
-                        <p>Name: Narasimha Puchakayala</p>
+                        <p>Name: Puchakayala Narasimha</p>
                         <p>Birthday: 25th August 2000</p>
                         <p>Age: 23 years</p>
-                        <p>Address: Tirupati, AP</p>
+                        <p>Address: Bangalore, KA</p>
                     </div>
                     <div className={AboutStyle.para_gap}>
-                        <p>Phone: +91 9161214709</p>
+                        <p>Phone: +91 9573597108</p>
                         <p>Email: narasimhapuchakayala15@gmail.com</p>
                         <p>Skype: Narasimha Puchakayala</p>
                     </div>
@@ -143,12 +143,12 @@ export default function About(){
                    <div className={AboutStyle.title_data}>
                         <p style={{fontSize: "20px",fontWeight: "500"}}>Front-end Developer</p>
                         <p>Oct 2023 - Present</p>
-                        <p className={AboutStyle.intern_data}>Internship</p>
+                        <p><Button variant="contained" style={{backgroundColor:'#03a9f4',textTransform:'capitalize'}}>Internship</Button></p>
                    </div>
                    <div className={AboutStyle.comp_descript}>
                         <p style={{fontSize: "20px",fontWeight: "500"}}>Kyurius Tech studios</p>
                         <div style={{color:'#555',lineHeight:'25px'}}>
-                            <p>Currently working as an intern at Kyurius tech studios, Bangalore,KA.</p>
+                            <p>Currently working as a intern at Kyurius tech studios Pvt Ltd, Bangalore,KA.</p>
                             <p>I have good knowledge on HTML CSS JavaScript Reactjs and other libraries with hands on experience during internship projects.</p>
                         </div>
                    </div>

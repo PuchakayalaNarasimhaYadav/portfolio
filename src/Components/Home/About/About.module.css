@@ -384,7 +384,7 @@
     gap: 25px;
     padding: 1rem;
     margin: 0px 0px 55px 0px;
-    
+    overflow-wrap: anywhere;
 }
 
 .mycard{
@@ -428,7 +428,7 @@
     font-size: 15px;
     font-weight: 400;
 }
-.intern_data{
+/* .intern_data{
     background-color:#03a9f4;
     color: #fff;
     width: 50%;
@@ -436,7 +436,7 @@
     text-align: center;
     border-radius: 4px;
    
-}
+} */
 .comp_descript{
     padding: 1rem;
     flex: 1;
@@ -513,5 +513,9 @@
     .image_bg{
         max-height: 300px;
         max-width: 300px;
+    }
+    .awd_carddata{
+        grid-template-columns: 1fr;
+
     }
 }

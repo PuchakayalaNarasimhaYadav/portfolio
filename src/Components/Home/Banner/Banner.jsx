@@ -22,9 +22,10 @@ export default function Banner(){
                         <p className={BannerStyle.desig_nation}>Front-end Developer</p>
                     </div>
                     <div className={BannerStyle.para}>
-                        <p>I design and develop services for customers of all sizes, </p>
+                        <p>I design web-based applications using latest technologies,</p>
+                        <p>develop services for customers of all sizes,</p>
                         <p>specializing in creating stylish, modern websites,</p>
-                        <p> web services and online stores.</p>
+                        <p>web services.</p>
                     </div>
                     <div>
                         <a href={file} download><Button variant="contained" style={{backgroundColor:'black',textTransform:'capitalize'}}>Download CV</Button></a>
@@ -51,9 +52,10 @@ export default function Banner(){
                         <p className={BannerStyle.desig_nation}>Front-end Developer</p>
                     </div>
                     <div className={BannerStyle.para_hide}>
-                        <p>I design and develop services for customers of all sizes, </p>
+                        <p>I design web-based applications using latest technologies,</p>
+                        <p>develop services for customers of all sizes,</p>
                         <p>specializing in creating stylish, modern websites,</p>
-                        <p> web services and online stores.</p>
+                        <p>web services.</p>
                     </div>
                     <div>
                         <a href={file} download><Button variant="contained" style={{backgroundColor:'black',textTransform:'capitalize'}}>Download CV</Button></a>
