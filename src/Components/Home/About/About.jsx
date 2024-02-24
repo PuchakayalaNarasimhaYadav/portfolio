@@ -18,7 +18,7 @@ export default function About(){
         <>
         <div className={AboutStyle.about_page} id="About_page">
         <div className={AboutStyle.About_main}>
-            <div className={AboutStyle.about_img_content} data-aos='fade-right'>
+            <div className={AboutStyle.about_img_content} data-aos='zoom-in'>
                 <div className={AboutStyle.about_img}>
                     <div className={AboutStyle.image_bg}>
                         

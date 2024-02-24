@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Contactstyles from './Contact.module.css'
-import { Button} from "@mui/material";
+import { Alert, Button, Stack} from "@mui/material";
 import AOS from "aos";
 import { SiGooglemaps } from "react-icons/si";
 import { MdOutlineMail } from "react-icons/md";
@@ -13,6 +13,8 @@ export default function Contact(){
         username:'',
         password:''
     })
+    const [success, setSuccess] = useState(false);
+    const [error,setError] = useState(false);
     function UsernameErrorhandler(){
         let  Isuserhandler = username && username.trim();
         let UserError ="";
@@ -55,8 +57,11 @@ export default function Contact(){
 
   const sendEmail = (e) => {
     e.preventDefault();
-    UsernameErrorhandler();
-    EmailErrorhandler();
+    if (!username.trim() || !email.trim() || !form.current['message'].value.trim()) {
+        alert('Please fill in all the required fields.');
+        return;
+    }
+   
     // console.log("e.....",e.current)
     emailjs
       .sendForm('service_dyr8h7s', 'template_j29f2fc', form.current, {
@@ -65,13 +70,21 @@ export default function Contact(){
       .then(
         () => {
           console.log('SUCCESS!');
-          form.current.reset()
-        },
+          form.current.reset();
+          setUsername("");
+          setEmail("");
+          setSuccess(true);
+          setTimeout(()=>setSuccess(false),3000)
+        }, 
         (error) => {
           console.log('FAILED...', error.text);
+          setError(true);
+          setTimeout(()=>setError(false),3000)
         },
       );
-      
+      UsernameErrorhandler();
+      EmailErrorhandler();
+     
   };
     return(
         <div className={Contactstyles.contact_main} id='contact'>
@@ -91,7 +104,7 @@ export default function Contact(){
                     <CiMobile3 size={30} color='grey'/> <p>+91  9573597108</p>
                     </div>
                 </div>
-                <div className={Contactstyles.form_details} data-aos='fade-right'>
+                <div className={Contactstyles.form_details} data-aos='zoom-in'>
                     <p>Say Something</p>
                     <form ref={form} onSubmit={sendEmail} autoComplete="off">
                         <div className={Contactstyles.form_main}>
@@ -125,6 +138,10 @@ export default function Contact(){
                                 <Button variant="contained" style={{textTransform:'capitalize'}} type="submit">Send Message</Button>
                             </div>
                     </form>
+                    <Stack spacing={2} sx={{ width: '100%' }} className={Contactstyles.alertmsgs}>
+                        {success && <Alert severity="success">Email sent successfully!</Alert>}
+                        {error && <Alert severity="error">Failed to send email. Please try again later.</Alert>}
+                    </Stack>
                 </div>
             </div>
         </div>
