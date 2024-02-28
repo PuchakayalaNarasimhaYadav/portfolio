@@ -1,6 +1,7 @@
 import dashboard from'../../Assets/dashboard.png'
 import portfolio from'../../Assets/Portfolio.png'
-import jobboard from '../../Assets/Job Board.png'
+import jobboard from '../../Assets/Job Board Background.png'
+import Landpage from '../../Assets/Landing page.png'
 const Myprojectdata =[
     {
         image:dashboard,
@@ -17,7 +18,11 @@ const Myprojectdata =[
         image:jobboard,
         project_title:'Job board',
         proj_link:"https://narasimha-job-board.netlify.app/",
-
+    },
+    {
+        image:Landpage,
+        project_title:'Interakt Landing page',
+        proj_link:"https://narasimha-landingpage.netlify.app/",
     }
 ]
 export default Myprojectdata
