@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import BannerStyle from './Banner.module.css'
 import { Button } from "@mui/material";
 import AOS from 'aos';
-import file from '../../Resume file/Narasimha_Resume.pdf'
+import file from '../../Resume file/Narasimha_Puchakayala_Resume.pdf'
 // import Snowfall from "react-snowfall";
 export default function Banner(){
     useEffect(() => {
